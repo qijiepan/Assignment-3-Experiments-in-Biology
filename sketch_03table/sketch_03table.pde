@@ -123,19 +123,14 @@ void drawAxis()
       text( colMin[colToDraw], xCoordsForAxis, yMinLbl);
       text( colMax[colToDraw], xCoordsForAxis, yMaxLbl);
     }
-    /*else
-    {
-      text( colMin[colToDraw], xCoordsForAxis, yMinLbl);
-      text( colMax[colToDraw], xCoordsForAxis, yMaxLbl);
-    }
-    */
+
 
     // Axis label
     textFont( labelFont );
     fill(fontAxisColor[0]);
     text( colNames[colToDraw], xCoordsForAxis, yAxisLbl );
 
-    // Triangle
+    // Triangle it will be beautiful
     fill(triangleColor);
     noStroke();
     if( axisFlipped[colToDraw] )
@@ -176,7 +171,7 @@ void drawLines()
         if(colToDraw == 0)
         {
           stroke( lerpColor(linesColor[0], linesColor[1],  map(value, cMin, cMax, 0., 1.) ), 150 );
-          //this is the kmeans works, but it looks like the graph will be a little bit 
+          //this is the kmeans works, but it looks like the graph will be a little bit messy and disorganized.
           
           if(mark[row]==0)
             stroke(255, 0, 0,150);
@@ -288,7 +283,7 @@ int[] kmeans(){
 
   return k;
 
-  //print(data2[0][0],data2[0][1]);
+  
 
 }
 

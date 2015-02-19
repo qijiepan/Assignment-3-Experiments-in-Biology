@@ -88,17 +88,16 @@ class FloatTable {
 
 
   float getFloat(int rowIndex, int col) {
-    // Remove the 'training wheels' section for greater efficiency
-    // It's included here to provide more useful error messages
+    
 
-    // begin training wheels
+    // to get the data in the table
     if ((rowIndex < 0) || (rowIndex >= data.length)) {
       throw new RuntimeException("There is no row " + rowIndex);
     }
     if ((col < 0) || (col >= data[rowIndex].length)) {
       throw new RuntimeException("Row " + rowIndex + " does not have a column " + col);
     }
-    // end training wheels
+    
 
     return data[rowIndex][col];
   }
